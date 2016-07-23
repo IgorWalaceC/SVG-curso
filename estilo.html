@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Estilizando</title>
+	<style type="text/css">
+		* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    padding: 50px;
+}
+
+p {
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+h2 {
+    margin: 50px 0 20px;
+}
+
+svg {
+    border: 1px solid red;
+}
+
+img,
+svg {
+    display: inline-block;
+}
+
+img {
+    max-width: 400px
+}
+
+svg {
+    vertical-align: top;
+    margin-top: 26px;
+}
+
+.hidden {
+    display: none;
+}
+
+.star {
+    fill: red;
+}
+	</style>
+</head>
+<body>
+<h1>Estilizando o SVG com CSS</h1>
+
+<h2>Estilo inline</h2>
+
+<svg style="width: 300; height:300px"; viewBox="0 0 300 300">
+	<polygon 
+	style="fill: yellow; stroke: black; stroke-width: 5;"
+	points="279.1,160.8 195.2,193.3 174.4,280.8   117.6,211.1 27.9,218.3 76.7,142.7 42.1,59.6 129.1,82.7 197.4,24.1 202.3,114" 
+	fill="yellow" stroke="#000" stroke-width="3"/>
+</svg>
+
+<h2>Estilo dentro do SVG</h2>
+	
+	<svg width="300" height="300" viewBox="0 0 300 300">
+		<style>
+			polygon{
+				fill: blue;
+				stroke: black;
+				stroke-width: 5;
+			}		
+		</style>
+		<polygon points="279.1,160.8 195.2,193.3 174.4,280.8   117.6,211.1 27.9,218.3 76.7,142.7 42.1,59.6 129.1,82.7 197.4,24.1 202.3,114" />
+</svg>
+
+<h2>Estilo fora do SVG</h2>
+	<style>
+			.star{
+				fill: green;
+				stroke: black;
+				stroke-width: 5;
+			}		
+	</style>
+	<svg width="300" height="300" viewBox="0 0 300 300">
+				<polygon class="star" points="279.1,160.8 195.2,193.3 174.4,280.8   117.6,211.1 27.9,218.3 76.7,142.7 42.1,59.6 129.1,82.7 197.4,24.1 202.3,114" />
+	</svg>
+	<a href="index.html">Home</a>
+</body>
+</html>
